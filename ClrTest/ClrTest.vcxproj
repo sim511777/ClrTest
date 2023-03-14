@@ -76,7 +76,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Managed.cpp" />
-    <ClCompile Include="Native.cpp" />
+    <ClCompile Include="Native.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
