@@ -4,17 +4,21 @@
 #include <iostream>
 
 #include "../ClrTest/Native.h"
+#include "../ClrTest2/Native.h"
 
 #ifdef _DEBUG
 #pragma comment(lib, "../x64/Debug/ClrTest.lib")
+#pragma comment(lib, "../x64/Debug/ClrTest2.lib")
 #else
 #pragma comment(lib, "../x64/Release/ClrTest.lib")
+#pragma comment(lib, "../x64/Release/ClrTest2.lib")
 #endif // _DEBUG
 
 
 int main()
 {
     std::cout << "Native_Add(3, 4) : " << Native_Add(3, 4) << std::endl;
+    std::cout << "Native2_Add(3, 4) : " << Native2_Add(3, 4) << std::endl;
     std::cin.get();
 }
 
